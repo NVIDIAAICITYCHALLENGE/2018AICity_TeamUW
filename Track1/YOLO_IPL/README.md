@@ -19,7 +19,7 @@ The code has been tested on Ubuntu 14.04 with g++, CUDA 8, cuDNN 5.1 and OpenCV 
 
 ### Installing
 
-Download the package of [YOLOv2](https://github.com/pjreddie/darknet) and extract all the contents. Replace the files in YOLOv2 by those given in this directory. Follow the instruction in Joseph Redmon's [blog](https://pjreddie.com/darknet/yolov2/) to make and test the trained model. The given bash files provide examples of processing the entire dataset.  
+Download the package of [YOLOv2](https://github.com/pjreddie/darknet) and extract all the contents. Replace the files in YOLOv2 by those given in this directory. The trained model (weights) can be downloaded [here](https://drive.google.com/file/d/1VKBZyJ0s2ejx3FWgr-r3iJ-Tu0QFokvd/view?usp=sharing). Follow the instruction in Joseph Redmon's [blog](https://pjreddie.com/darknet/yolov2/) to make and test the trained model. The given bash files provide examples of processing the entire dataset.  
 
 <div align="center">
     <img src="demo.png", width="1000">
