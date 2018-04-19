@@ -1,4 +1,4 @@
-# Single-camera and Inter-camera Vehicle Tracking and 3D Speed Estimation Based on Fusion of Visual and Semantic Features for NVIDIA AI City Challenge Workshop at CVPR 2018
+# Single-camera and Inter-camera Vehicle Tracking and 3D Speed Estimation Based on Fusion of Visual and Semantic Features for the NVIDIA AI City Challenge Workshop at CVPR 2018
 
 This repository contains our source code of Track 1 and Track 3 in the NVIDIA AI City Challenge Workshop at CVPR 2018.
 
@@ -43,7 +43,7 @@ Under the `./Track1/` folder, there are 6 software packages:
 
 1. VDO2IMG_IPL: Converting each video file to a folder of frame images
 2. CAM_CAL_IPL: Manual camera calibration based on minimization of reprojection error and EDA optimization
-3. YOLO_IPL: Extension of the YOLOv2 object detector with our trained model for vehicle detection/classification
+3. YOLO_VEH_IPL: Extension of the YOLOv2 object detector with our trained model for vehicle detection/classification
 4. TC_tracker: Proposed tracklet-clustering-based tracking method
 5. APP_MDL_IPL: Extraction of histogram-based adaptive apperance models and their comparison
 6. SPD_EST_IPL: Speed estimation based on input of tracking results and camera parameters

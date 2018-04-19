@@ -1,4 +1,4 @@
-# YOLO_IPL
+# YOLO_VEH_IPL
 
 This is an extension to the branch of [YOLOv2](https://github.com/pjreddie/darknet), including our trained model for vehicle detection on the dataset of NVIDIA AI City Challenge. 
 
