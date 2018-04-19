@@ -44,3 +44,5 @@ For input 3D tracking results in text, the format of each line is as follows:
 \<frame_id\>,\<obj_id\>,\<xmin\>,\<ymin\>,\<width\>,\<height\>,\<confidence\>,<X_3D>,<Y_3D>,<Z_3D>,\<class\>
 
 This is similar to the required format of [MOTChallenge](https://motchallenge.net/). The frame ID and object ID are both 0-based. The confidence is in percentage. In the 3D coordinate system, the ground plane is equivalent to the X-Y plane. The Z axis points upward and passes through the camera location. 
+
+For output feature vectors in text, there are 1 to 32 lines in each text file. Each line contains 88 feature values forming a concatenated histogram of BGR, HSV, Lab, LBP and gradient. 
