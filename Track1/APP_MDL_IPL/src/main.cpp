@@ -8,6 +8,7 @@
 //-----------------------------------------------------------------------------------
 
 #include <fstream>
+#include <math.h>
 //#include <direct.h>	// in Windows
 #include <sys/stat.h>	// in Linux
 #include <opencv2/core/core.hpp>
@@ -305,9 +306,10 @@ cv::Mat genLbp(const cv::Mat& oImgSrc, int nLbpOp = 1, int nRad = 1, int nNbrNum
 void calcHist(cv::Mat oImg, cv::Mat oMsk, std::vector<float>& vfAppMdlHist, int nHistSz)
 {
     int nImgVal, nMskVal, nHistBin = 256 / nHistSz;
+    double fVecMag = 0.0;
 
-    for (int i = 0; i < nHistSz; i++)
-        vfAppMdlHist[i] = 0.0f;
+    for (int b = 0; b < nHistSz; b++)
+        vfAppMdlHist[b] = 0.0f;
 
     for (int x = 0; x < oImg.cols; x++)
     {
@@ -318,14 +320,22 @@ void calcHist(cv::Mat oImg, cv::Mat oMsk, std::vector<float>& vfAppMdlHist, int 
             vfAppMdlHist[nImgVal / nHistBin] += (float)nMskVal / 255.0f;
         }
     }
+
+    // normalize the histogram by L2 norm
+    for (int b = 0; b < nHistSz; b++)
+        fVecMag += vfAppMdlHist[b] * vfAppMdlHist[b];
+    fVecMag = std::sqrt(fVecMag);
+    for (int b = 0; b < nHistSz; b++)
+        vfAppMdlHist[b] /= fVecMag;
 }
 
 // compare adaptive appearance features of a probe and a gallery
-// return true if the probe and gallery are matched, and false vice versa
+// return the distance between the probe and the gallery (between 0 and 1)
 // nHistCmpTyp: -1: EMD; 0: Correlation; 1: Chi-Square; 2: Intersection; 3: Bhattacharyya distance
-float compAppMdl(char *acInFeatFlrPthPrb, int nIdPrb, char *acInFeatFlrPthGall, int nIdGall, int nHistCmpTyp, int nEmdDistTyp = CV_DIST_L1)
+float compAppMdl(char *acInFeatFlrPthPrb, int nIdPrb, char *acInFeatFlrPthGall, int nIdGall, double fDistThld, int nHistCmpTyp, int nEmdDistTyp = CV_DIST_L1)
 {
-    double fDist = 0.0;
+    int nUnmtchCnt = 0;
+    double fDist;
     char acInFeatNm[128] = {};
 	char acInFeatPth[128] = {};
 	char acInFeatBuf[2048] = {};
@@ -422,7 +432,7 @@ float compAppMdl(char *acInFeatFlrPthPrb, int nIdPrb, char *acInFeatFlrPthGall, 
 
             // compute distance between probe histograms and gallery histograms
             if (0 <= nHistCmpTyp)
-                fDist += cv::compareHist(oAppMdlHistPrb, oAppMdlHistGall, nHistCmpTyp);
+                fDist = cv::compareHist(oAppMdlHistPrb, oAppMdlHistGall, nHistCmpTyp);
             else
             {
                 // create signatures as required by EMD
@@ -434,16 +444,15 @@ float compAppMdl(char *acInFeatFlrPthPrb, int nIdPrb, char *acInFeatFlrPthGall, 
                     oAppMdlSigGall.at<float>(b, 1) = b;
                 }
 
-                fDist += cv::EMD(oAppMdlSigPrb, oAppMdlSigGall, nEmdDistTyp);
+                fDist = cv::EMD(oAppMdlSigPrb, oAppMdlSigGall, nEmdDistTyp);
             }
+
+            if (fDistThld < fDist)
+                nUnmtchCnt++;
 		}
 	}
 
-	// compute the average distance
-	fDist /= (vvfAppMdlPrb.size() * vvfAppMdlGall.size());
-    std::printf("distance: %.7f\n", fDist);
-
-    return fDist;
+    return ((float)nUnmtchCnt / (float)(vvfAppMdlPrb.size() * vvfAppMdlGall.size()));
 }
 
 // inTrkRes inFrmFlr outFeatFlr fWgtBGR fWgtHSV fWgtLab fWgtLbp fWgtGrad

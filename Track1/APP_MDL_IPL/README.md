@@ -6,7 +6,7 @@ APP_MDL_IPL is joint work with Zheng (Thomas) Tang, Gaoang Wang, Hao Xiao, Aotia
 
 ## How It Works
 
-The appearance model of the j-th tracklet, noted _m_j_, contains a set of _n_m_ observed concatenated histogram vectors. In our experiments, we use a combination of RGB color histogram, HSV color histogram, Lab color histogram, Linear Binary Pattern (LBP) histogram and gradient histogram for feature description, i.e., there are 11 channels with 8 bins each. For each tracklet, we keep _n_m_ copies of continuously updated histograms to “memorize” variations of the appearance. An example of feature maps and the corresponding histograms is shown in the figure below. The first row respectively presents the RGB, HSV, Lab, LBP and gradient feature maps for an object instance in a tracklet, which are used to build feature histograms. The second row shows the original RGB color histograms and the third row demonstrates the Gaussian spatially weighted histograms, where the contribution of background area is suppressed. 
+The appearance model of the j-th tracklet, noted _m_j_, contains a set of _n_m_ observed concatenated histogram vectors. In our experiments, we use a combination of RGB color histogram, HSV color histogram, Lab color histogram, Linear Binary Pattern (LBP) histogram and gradient histogram for feature description, i.e., there are 11 channels with 8 bins each. For each tracklet, we keep _n_m_ copies of continuously updated histograms to “memorize” variations of the appearance. The value in each bin is normalized between 0 and 1. An example of feature maps and the corresponding histograms is shown in the figure below. The first row respectively presents the RGB, HSV, Lab, LBP and gradient feature maps for an object instance in a tracklet, which are used to build feature histograms. The second row shows the original RGB color histograms and the third row demonstrates the Gaussian spatially weighted histograms, where the contribution of background area is suppressed. 
 
 <div align="center">
     <img src="demo.png", width="1000">
@@ -35,7 +35,7 @@ Compile the source code with g++.
 
 When running the code, the input format is `<executable file name> <input 3D tracking results> <input folder of frame images> <output folder of feature vectors> <weight for BGR component> <weight for HSV component> <weight for Lab component> <weight for LBP component> <weight for gradient component>`. The weight for each component should be a floating number between 0 and 1, where smaller weight will suppress the corresponding component.  
 
-To compare two adaptive appearance models, the user can use the given function `compAppMdl()`. The required input are the folder paths and IDs of the probe and the gallery. Different types of histogram comparison are provided, including EMD, correlation, chi-square, intersection and Bhattacharyya distance. The returned value is the averaged distance between two appearance model. 
+To compare two adaptive appearance models, the user can use the given function `compAppMdl()`. The required input are the folder paths and IDs of the probe and the gallery. Different types of histogram comparison are provided, including EMD, correlation, chi-square, intersection and Bhattacharyya distance. The returned value is the distance normalized to 0-1 between two appearance models. 
 
 ### Input/Output Format
 
