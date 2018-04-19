@@ -22,18 +22,24 @@ The code has been tested on Ubuntu 14.04 with g++, CUDA 8, cuDNN 5.1 and OpenCV 
 Download the package of [YOLOv2](https://github.com/pjreddie/darknet) and extract all the contents. Replace the files in YOLOv2 by those given in this directory. The trained model (weights) can be downloaded [here](https://drive.google.com/file/d/1feRI56GgkjDKCZOul4-xeAEQv3DjbuhH/view?usp=sharing). Follow the instruction in Joseph Redmon's [blog](https://pjreddie.com/darknet/yolov2/) to make and test the trained model. The given bash file provides an example of processing the entire dataset.  
 
 <div align="center">
-    <img src="demo0.jpg", width="200">
+    <img src="demo0.jpg", width="100">
 </div>
 
 <div align="center">
-    <img src="demo1.jpg", width="200">
+    <img src="demo1.jpg", width="100">
 </div>
 
 <div align="center">
-    <img src="demo2.jpg", width="200">
+    <img src="demo2.jpg", width="100">
 </div>
 
 ### Input/Output Format
+
+For input paths of vehicle images in text, the format of each line is as follows:
+
+\<input_vehicle_image_path\>
+
+This text file simply lists all the cropped vehicle images for license plate detection.   
 
 For output detection results in text, the format of each line is as follows:
 
