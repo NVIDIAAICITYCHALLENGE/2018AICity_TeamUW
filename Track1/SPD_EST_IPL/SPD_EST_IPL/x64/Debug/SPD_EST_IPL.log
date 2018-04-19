@@ -1,17 +1,1 @@
-﻿  main.cpp
-d:\research\mot\aicity18\2018aicity_teamuw\track1\spd_est_ipl\spd_est_ipl\src\main.cpp(123): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
-d:\research\mot\aicity18\2018aicity_teamuw\track1\spd_est_ipl\spd_est_ipl\src\main.cpp(296): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-d:\research\mot\aicity18\2018aicity_teamuw\track1\spd_est_ipl\spd_est_ipl\src\main.cpp(298): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
-d:\research\mot\aicity18\2018aicity_teamuw\track1\spd_est_ipl\spd_est_ipl\src\main.cpp(324): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
-d:\research\mot\aicity18\2018aicity_teamuw\track1\spd_est_ipl\spd_est_ipl\src\main.cpp(338): warning C4244: '+=': conversion from 'double' to 'float', possible loss of data
-d:\research\mot\aicity18\2018aicity_teamuw\track1\spd_est_ipl\spd_est_ipl\src\main.cpp(347): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
-d:\research\mot\aicity18\2018aicity_teamuw\track1\spd_est_ipl\spd_est_ipl\src\main.cpp(361): warning C4244: '+=': conversion from 'double' to 'float', possible loss of data
-d:\research\mot\aicity18\2018aicity_teamuw\track1\spd_est_ipl\spd_est_ipl\src\main.cpp(375): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
-d:\research\mot\aicity18\2018aicity_teamuw\track1\spd_est_ipl\spd_est_ipl\src\main.cpp(404): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
-d:\research\mot\aicity18\2018aicity_teamuw\track1\spd_est_ipl\spd_est_ipl\src\main.cpp(422): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
-d:\research\mot\aicity18\2018aicity_teamuw\track1\spd_est_ipl\spd_est_ipl\src\main.cpp(437): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
-d:\research\mot\aicity18\2018aicity_teamuw\track1\spd_est_ipl\spd_est_ipl\src\main.cpp(445): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
-d:\research\mot\aicity18\2018aicity_teamuw\track1\spd_est_ipl\spd_est_ipl\src\main.cpp(529): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
-d:\research\mot\aicity18\2018aicity_teamuw\track1\spd_est_ipl\spd_est_ipl\src\main.cpp(472): warning C4101: 'acVdo': unreferenced local variable
-d:\research\mot\aicity18\2018aicity_teamuw\track1\spd_est_ipl\spd_est_ipl\src\main.cpp(278): warning C4101: 'fSpd': unreferenced local variable
-  SPD_EST_IPL.vcxproj -> D:\research\mot\aicity18\2018AICity_TeamUW\Track1\SPD_EST_IPL\x64\Debug\SPD_EST_IPL.exe
+﻿  SPD_EST_IPL.vcxproj -> D:\research\mot\aicity18\2018AICity_TeamUW\Track1\SPD_EST_IPL\x64\Debug\SPD_EST_IPL.exe

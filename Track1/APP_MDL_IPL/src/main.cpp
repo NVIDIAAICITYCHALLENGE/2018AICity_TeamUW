@@ -572,7 +572,8 @@ int main(int argc, char *argv[])
 				oBBox = oBBoxf;
 				//o2dFtPt = cv::Point2f((oBBox.x + (oBBox.width / 2.0f)), (oBBox.y + (oBBox.height / 2.0f)));
 				o2dFtPt = cv::Point2f((oBBox.x + (oBBox.width / 2.0f)), (oBBox.y + oBBox.height));
-				fDep = cv::norm(o3dFtPt);
+				//fDep = cv::norm(o3dFtPt);
+				fDep = 1.0f / o2dFtPt.y;
 
 				// at the frame border
 				if ((FRM_BRDR_BDTH > oBBox.x) || (FRM_BRDR_BDTH > oBBox.y) ||
@@ -684,7 +685,7 @@ int main(int argc, char *argv[])
 							fProb = static_cast<double>(rand()) / static_cast<double>(RAND_MAX);
 
 						// for distant objects, there is small probability for model update
-						if ((APP_MDL_SMP_NUM > nSmpCnt) || ((APP_MDL_SMP_NUM <= nSmpCnt) && (fProb <= ((vfIdMinDep[nId] / it->getDep()) * (vfIdMinDep[nId] / it->getDep())))))
+						if ((APP_MDL_SMP_NUM > nSmpCnt) || ((APP_MDL_SMP_NUM <= nSmpCnt) && (fProb <= (vfIdMinDep[nId] / it->getDep()))))
 						{
 							// extract and normalize object image
 							oAppMdlFrm = oImgFrm(oBBox);
