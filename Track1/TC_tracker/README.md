@@ -10,7 +10,7 @@ In single-camera tracking (SCT), the loss function consists of motion, temporal 
 
 ## Getting Started
 
-### Prerequisites
+### Prerequisite
 
 MATLAB
 
