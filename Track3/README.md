@@ -2,7 +2,7 @@
 
 ## Introduction
 
-Traffic Flow Analysis - Multi-camera Vehicle Detection and Reidentification - Participating teams identify all vehicles that are seen passing at least once at all of 4 different locations in a set of 15 videos. Evaluation for Challenge Track 3 is based on detection accuracy and localization sensitivity for a set of ground-truth vehicles that were driven through all camera locations at least once.
+Multi-camera Vehicle Detection and Reidentification - Participating teams identify all vehicles that are seen passing at least once at all of 4 different locations in a set of 15 videos. Evaluation for Challenge Track 3 is based on detection accuracy and localization sensitivity for a set of ground-truth vehicles that were driven through all camera locations at least once.
 
 ## How It Works
 
