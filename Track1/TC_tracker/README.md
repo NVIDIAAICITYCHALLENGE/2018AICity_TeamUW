@@ -2,7 +2,7 @@
 
 This is an implementation of tracklet clustering for 2D tracking.
 
-TC_tracker is mainly developed by Gaoang Wang, with the joint efforts from Zheng (Thomas) Tang, Hao Xiao, Aotian Zheng, and Prof. Jenq-Neng Hwang from the Information Processing Lab in the Department of Electrical Engineering, University of Washington. 
+`TC_tracker` is mainly developed by Gaoang Wang, with the joint efforts from Zheng (Thomas) Tang, Hao Xiao, Aotian Zheng, and Prof. Jenq-Neng Hwang from the Information Processing Lab in the Department of Electrical Engineering, University of Washington. 
 
 ## How It Works
 

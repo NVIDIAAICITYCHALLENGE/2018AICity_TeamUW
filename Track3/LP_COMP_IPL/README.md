@@ -2,7 +2,7 @@
 
 This is an implementation of low-resolution license plate comparison by bitwise-OR operation.
 
-LP_COMP_IPL is joint work with Zheng (Thomas) Tang, Gaoang Wang, Hao Xiao, Aotian Zheng, and Prof. Jenq-Neng Hwang from the Information Processing Lab in the Department of Electrical Engineering, University of Washington. 
+`LP_COMP_IPL` is joint work with Zheng (Thomas) Tang, Gaoang Wang, Hao Xiao, Aotian Zheng, and Prof. Jenq-Neng Hwang from the Information Processing Lab in the Department of Electrical Engineering, University of Washington. 
 
 ## How It Works
 

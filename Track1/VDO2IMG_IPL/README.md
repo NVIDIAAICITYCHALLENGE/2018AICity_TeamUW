@@ -2,7 +2,7 @@
 
 This is an implementation of converting a video file into a folder of frame images. 
 
-VDO2IMG_IPL is joint work with Zheng (Thomas) Tang, Gaoang Wang, Hao Xiao, Aotian Zheng, and Prof. Jenq-Neng Hwang from the Information Processing Lab in the Department of Electrical Engineering, University of Washington. 
+`VDO2IMG_IPL` is joint work with Zheng (Thomas) Tang, Gaoang Wang, Hao Xiao, Aotian Zheng, and Prof. Jenq-Neng Hwang from the Information Processing Lab in the Department of Electrical Engineering, University of Washington. 
 
 ### Prerequisites
 

@@ -41,18 +41,26 @@ The proposed appearance model together with DCNN features, license plates, detec
 
 Under the `./Track1/` folder, there are 6 software packages:
 
-1. VDO2IMG_IPL: Converting each video file to a folder of frame images
-2. CAM_CAL_IPL: Manual camera calibration based on minimization of reprojection error and EDA optimization
-3. YOLO_VEH_IPL: Extension of the YOLOv2 object detector with our trained model for vehicle detection/classification
-4. TC_tracker: Proposed tracklet-clustering-based tracking method
-5. APP_MDL_IPL: Extraction of histogram-based adaptive apperance models and their comparison
-6. SPD_EST_IPL: Speed estimation based on input of tracking results and camera parameters
+1. `VDO2IMG_IPL`: Converting each video file to a folder of frame images
+2. `CAM_CAL_IPL`: Manual camera calibration based on minimization of reprojection error and EDA optimization
+3. `YOLO_VEH_IPL`: Extension of the YOLOv2 object detector with our trained model for vehicle detection/classification
+4. `TC_tracker`: Proposed tracklet-clustering-based tracking method
+5. `APP_MDL_IPL`: Extraction of histogram-based adaptive apperance models and their comparison
+6. `SPD_EST_IPL`: Speed estimation based on input of tracking results and camera parameters
 
 Detailed description of each package is given in each subfolder. 
 
 ### Track 3
 
-Under the `./Track3/` folder
+Under the `./Track3/` folder, there are 3 software packages:
+
+1. `Multi-Camera Vehicle Tracking and Re-identification`: Multi-camera vehicle tracking based on a fusion of histogram-based adaptive appearance models, DCNN features, detected car types and traveling time information
+2. `YOLO_LP_IPL`: Detection of license plate from each cropped vehicle image
+3. `LP_COMP_IPL`: Comparison of license plates under low resolution
+
+Detailed description of each package is given in each subfolder. 
+
+The output of `Multi-Camera Vehicle Tracking and Re-identification` is the similarity score between each pair of vehicles for comparison. We can convert it into a distance score by inverse proportion. The output of `LP_COMP_IPL` is the distance score between each two license plates. The final distance score between two vehicles is the multiplication of the above two distance scores. Several vehicle pairs that enjoy low distance scores and appear in all 4 camera locations are submitted to Track 3 for evaluation. 
 
 ## Reference
 

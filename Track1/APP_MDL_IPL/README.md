@@ -2,7 +2,7 @@
 
 This is an implementation of the extraction of histogram-based adaptive appearance features and their comparison.
 
-APP_MDL_IPL is joint work with Zheng (Thomas) Tang, Gaoang Wang, Hao Xiao, Aotian Zheng, and Prof. Jenq-Neng Hwang from the Information Processing Lab in the Department of Electrical Engineering, University of Washington. 
+`APP_MDL_IPL` is joint work with Zheng (Thomas) Tang, Gaoang Wang, Hao Xiao, Aotian Zheng, and Prof. Jenq-Neng Hwang from the Information Processing Lab in the Department of Electrical Engineering, University of Washington. 
 
 ## How It Works
 

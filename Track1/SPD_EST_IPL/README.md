@@ -2,7 +2,7 @@
 
 This is an implementation of 3D speed estimation based on input of 2D tracking results and camera parameters.
 
-SPD_EST_IPL is joint work with Zheng (Thomas) Tang, Gaoang Wang, Hao Xiao, Aotian Zheng, and Prof. Jenq-Neng Hwang from the Information Processing Lab in the Department of Electrical Engineering, University of Washington. 
+`SPD_EST_IPL` is joint work with Zheng (Thomas) Tang, Gaoang Wang, Hao Xiao, Aotian Zheng, and Prof. Jenq-Neng Hwang from the Information Processing Lab in the Department of Electrical Engineering, University of Washington. 
 
 ## How It Works
 
